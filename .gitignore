@@ -115,3 +115,5 @@ logs/
 models/
 data/Norman/
 data/GEARS/
+notebooks/linear_regression_bench/tmp/
+notebooks/linear_regression_bench/data/
