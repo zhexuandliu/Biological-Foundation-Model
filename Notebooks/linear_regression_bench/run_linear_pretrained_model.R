@@ -32,9 +32,9 @@ pa <- list(
   ridge_penalty = 0.1,
   seed = 1,
   gene_embedding = "training_data",
-  pert_embedding = "./tmp/working_dir/results/replogle_k562_pert_embedding",
+  pert_embedding = "./data/pert_embeddings_finetune.csv", # "./tmp/working_dir/results/replogle_k562_pert_embedding",
   working_dir = "/Users/zhexuanliu/Documents/GitHub/Biological-Foundation-Model/notebooks/linear_regression_bench/tmp/working_dir",
-  result_id = "linear_results_training_data_replogle_k562_pert_embedding"
+  result_id = "linear_results_training_data_scGPT_finetune"
 )
 
 print(pa)
@@ -122,7 +122,10 @@ gene_emb <- if(pa$gene_embedding == "training_data"){
   rownames(tmp) <- rownames(psce)
   tmp
 }else{
-  t(as.matrix(data.table::fread(pa$gene_embedding)))
+  train_data = t(as.matrix(data.table::fread(pa$gene_embedding)))
+  pca <- irlba::prcomp_irlba(train_data, n = pa$pca_dim)
+  rownames(pca$x) <- rownames(train_data)
+  pca$x
 }
 
 pert_emb <- if(pa$pert_embedding == "training_data"){
