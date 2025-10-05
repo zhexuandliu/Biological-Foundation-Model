@@ -117,3 +117,14 @@ data/Norman/
 data/GEARS/
 notebooks/linear_regression_bench/tmp/
 notebooks/linear_regression_bench/data/
+notebooks/scGPT_finetune/data/
+notebooks/scGPT_finetune/save/
+notebooks/scGPT_finetune/pert_embeddings_finetune.csv
+notebooks/scGPT_finetune/pert_embeddings_pretrain.csv
+
+Notebooks/linear_regression_bench/tmp/
+Notebooks/linear_regression_bench/data/
+Notebooks/scGPT_finetune/data/
+Notebooks/scGPT_finetune/save/
+Notebooks/scGPT_finetune/pert_embeddings_finetune.csv
+Notebooks/scGPT_finetune/pert_embeddings_pretrain.csv

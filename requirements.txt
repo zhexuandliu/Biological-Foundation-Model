@@ -13,3 +13,4 @@ mygene==3.2.2
 omnipath==1.0.9
 
 anndata
+gseapy
