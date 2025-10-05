@@ -1,0 +1,14 @@
+{
+  "significant_diffs": [
+    "gene_vars",
+    "cell_means",
+    "cell_zeros",
+    "n_genes_expressed",
+    "total_expression"
+  ],
+  "ood_indicators": [
+    "Gene expression differences (5 metrics)",
+    "Novel perturbations in test set (22 perturbations)"
+  ],
+  "is_ood": true
+}
