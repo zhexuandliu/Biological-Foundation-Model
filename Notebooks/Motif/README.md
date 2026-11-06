@@ -30,6 +30,12 @@ Run in this order; later notebooks read what earlier ones wrote to Drive.
 | `Function CAV - NT 2.5B, Region 0.ipynb` | NT 2.5B on region 0. | Run. AUC 0.79 (> NT-v2 500M 0.77), but motifbreakR + CAV Pearson 0.25 vs 0.40 for NT-v2 500M. |
 | `Function CAV - NT v2 100M and 250M, Region 0.ipynb` | Model size within one family: NT-v2 100M / 250M / 500M. | **Not run yet.** |
 
+### Follow-ups from the meeting
+
+| notebook | what it asks | status |
+|---|---|---|
+| `MPRA Evaluation - Tolerant Metric and CAV Confidence.ipynb` | (A) Score motifbreakR vs motifbreakR + CAV with smoothed tracks and with hits/misses allowing ±k bp offset; (B) does the CAV's own confidence (P(bound), held-out AUC) tell where it beats motifbreakR? CPU only, reads existing fits. | Built 2026-11-05, **not run yet**. |
+
 Takeaway from the meeting: the partner-insertion experiment is well controlled and its result is consistent
 across models. The MPRA comparison is noisy, because each region has only one to three strong peaks, so a
 single wrong motif choice decides the correlation.
