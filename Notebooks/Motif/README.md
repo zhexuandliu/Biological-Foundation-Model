@@ -34,7 +34,9 @@ Run in this order; later notebooks read what earlier ones wrote to Drive.
 
 | notebook | what it asks | status |
 |---|---|---|
-| `MPRA Evaluation - Tolerant Metric and CAV Confidence.ipynb` | (A) Score motifbreakR vs motifbreakR + CAV with smoothed tracks and with hits/misses allowing ±k bp offset; (B) does the CAV's own confidence (P(bound), held-out AUC) tell where it beats motifbreakR? CPU only, reads existing fits. | Built 2026-11-05, **not run yet**. |
+| `MPRA Evaluation - Tolerant Metric and CAV Confidence.ipynb` | (A) Score motifbreakR vs motifbreakR + CAV with smoothed tracks and with hits/misses allowing ±k bp offset; (B) does the CAV's own confidence (P(bound), held-out AUC) tell where it beats motifbreakR? (C) per-occurrence calibration. CPU only, reads existing fits. | Run 2026-11-05. |
+| `Pooled Regions 1 - Sites and Fits for Every MPRA Region.ipynb` | Hits, sites and function-CAV fits for all 21 MPRA regions, five models, one fit per TF shared by all regions, each model at the layer it used before. Section 1 CPU, Section 2 GPU (resumable). Writes `fcav_pool/`. | Built 2026-11-07, **not run yet**. |
+| `Pooled Regions 2 - MPRA Evaluation over Every Region.ipynb` | motifbreakR vs motifbreakR + CAV on every region; pooled over all / HepG2-K562 / other-cell regions with two nulls; gain vs number of peaks and vs the CAV's confidence; per-occurrence calibration over all regions. CPU only. | Built 2026-11-07, **not run yet**. |
 
 Takeaway from the meeting: the partner-insertion experiment is well controlled and its result is consistent
 across models. The MPRA comparison is noisy, because each region has only one to three strong peaks, so a
